@@ -3,48 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Перегляд відео</title>
+  <title>Оберіть відео</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       background: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      color: #0f0f0f;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
     }
     h1 {
+      margin-bottom: 20px;
       font-size: 2rem;
-      margin-bottom: 30px;
     }
-    .btn {
-      display: block;
-      width: 220px;
-      margin: 10px;
-      padding: 15px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #fff;
-      background-color: #ff0000;
+    .video {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 15px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 220px;
       border: none;
       border-radius: 6px;
-      cursor: pointer;
+    }
+    .btn {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #ff0000;
+      color: #fff;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
     .btn:hover {
-      background-color: #cc0000;
+      background: #cc0000;
     }
   </style>
 </head>
 <body>
   <h1>Оберіть відео для перегляду</h1>
-  <a class="btn" href="https://www.youtube.com/watch?v=bXneT3rbpjQ" target="_blank">🎬 Відео 1</a>
-  <a class="btn" href="https://www.youtube.com/watch?v=R2CQspaDxWs" target="_blank">🎥 Відео 2</a>
-  <a class="btn" href="https://www.youtube.com/watch?v=tXxQkFG5vtY" target="_blank">📺 Відео 3</a>
+
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/bXneT3rbpjQ" allowfullscreen></iframe>
+    <a class="btn" href="https://www.youtube.com/watch?v=bXneT3rbpjQ" target="_blank">Переглянути на YouTube</a>
+  </div>
+
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+    <a class="btn" href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank">Переглянути на YouTube</a>
+  </div>
+
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+    <a class="btn" href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank">Переглянути на YouTube</a>
+  </div>
 </body>
 </html>
