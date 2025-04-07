@@ -37,6 +37,12 @@
       background-color: white;
       border-radius: 8px;
       padding: 5px;
+      animation: popIn 0.6s ease-in-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     .theme-toggle {
