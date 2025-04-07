@@ -5,23 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Оберіть відео</title>
   <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-color: #1e1e1e;
+    }
+
+    body.light {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-color: #f0f0f0;
+    }
+
     body {
       margin: 0;
       padding: 20px;
-      background: #121212;
+      background: var(--bg-color);
       font-family: 'Segoe UI', sans-serif;
-      color: #ffffff;
+      color: var(--text-color);
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+    .theme-toggle {
+      margin-bottom: 20px;
+      cursor: pointer;
+      background: transparent;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
     }
     h1 {
       margin-bottom: 20px;
       font-size: 2rem;
-      color: #ffffff;
     }
     .video {
-      background: #1e1e1e;
+      background: var(--card-color);
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       margin: 15px;
@@ -47,27 +73,29 @@
       font-weight: bold;
       transition: background 0.3s ease;
     }
-    .btn: hover {
+    .btn:hover {
       background: #cc0000;
     }
   </style>
 </head>
 <body>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" class="logo">
+  <button class="theme-toggle" onclick="document.body.classList.toggle('light')">Перемкнути тему</button>
   <h1>Оберіть відео для перегляду</h1>
 
   <div class="video">
     <iframe src="https://www.youtube.com/embed/bXneT3rbpjQ" allowfullscreen></iframe>
-    <a class="btn" href="https://www.youtube.com/watch?v=RHMKyF4x-wU" target="_blank">Переглянути на YouTube</a>
+    <a class="btn" href="https://www.youtube.com/watch?v=bXneT3rbpjQ" target="_blank">Переглянути на YouTube</a>
   </div>
 
   <div class="video">
     <iframe src="https://www.youtube.com/embed/TvbasBUmShU" allowfullscreen></iframe>
-    <a class="btn" href="https://www.youtube.com/watch?v=RHMKyF4x-wU" target="_blank">Переглянути на YouTube</a>
+    <a class="btn" href="https://www.youtube.com/watch?v=TvbasBUmShU&t=931s" target="_blank">Переглянути на YouTube</a>
   </div>
 
   <div class="video">
     <iframe src="https://www.youtube.com/embed/JHEoFy7vfwM" allowfullscreen></iframe>
-    <a class="btn" href="https://www.youtube.com/watch?v=RHMKyF4x-wU" target="_blank">Переглянути на YouTube</a>
+    <a class="btn" href="https://www.youtube.com/watch?v=JHEoFy7vfwM&t=424s" target="_blank">Переглянути на YouTube</a>
   </div>
 </body>
 </html>
