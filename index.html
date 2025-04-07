@@ -33,16 +33,7 @@
     .logo {
       width: 140px;
       margin-bottom: 10px;
-      filter: drop-shadow(0 2px 4px rgba(255,255,255,0.6));
-      background-color: white;
-      border-radius: 8px;
-      padding: 5px;
-      animation: popIn 0.6s ease-in-out;
-    }
-
-    @keyframes popIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
     }
 
     .theme-toggle {
@@ -81,9 +72,9 @@
       opacity: 0;
     }
 
-    .video:nth-child(3) { animation-delay: 0.2s; }
-    .video:nth-child(4) { animation-delay: 0.4s; }
-    .video:nth-child(5) { animation-delay: 0.6s; }
+    .video:nth-of-type(1) { animation-delay: 0.2s; }
+    .video:nth-of-type(2) { animation-delay: 0.4s; }
+    .video:nth-of-type(3) { animation-delay: 0.6s; }
 
     @keyframes fadeIn {
       to {
@@ -133,13 +124,10 @@
   </div>
 
   <div class="video">
-    <iframe src="https://www.youtube.com/watch?v=89dGC8de0CA" allowfullscreen></iframe>
-    <a class="btn" href="https://www.youtube.com/watch?v=89dGC8de0CA" target="_blank">Переглянути на YouTube</a>
+    <iframe src="https://www.youtube.com/embed/JHEoFy7vfwM" allowfullscreen></iframe>
+    <a class="btn" href="https://www.youtube.com/watch?v=JHEoFy7vfwM" target="_blank">Переглянути на YouTube</a>
   </div>
 
   <div class="video">
-    <iframe src="https://youtu.be/JHEoFy7vfwM?si=n19ByJAl4BILphVP" allowfullscreen></iframe>
-    <a class="btn" href="https://youtu.be/JHEoFy7vfwM?si=n19ByJAl4BILphVP" target="_blank">Переглянути на YouTube</a>
-  </div>
-</body>
-</html>
+    <iframe src="https://www.youtube.com/embed/iJDtukGW79Y" allowfullscreen></iframe>
+    <a class="btn" href="https://ww
